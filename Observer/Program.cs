@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ObserverPattern
+﻿namespace ObserverPattern
 {
     class Program
     {
@@ -8,8 +6,9 @@ namespace ObserverPattern
         {
             WeatherStation weatherStation = new WeatherStation();
             CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay(weatherStation);
+            StatisticsDisplay statisticsDisplay = new StatisticsDisplay(weatherStation);
             weatherStation.setMeasurements(80, 65, 30.4);
-            weatherStation.setMeasurements(72, 70, 29.2);
+            weatherStation.setMeasurements(82, 70, 29.2);
             weatherStation.setMeasurements(78, 90, 29.2);
         }
     }

@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ObserverPattern
 {
-    public class CurrentConditionsDisplay : Observer, DisplayElement
+    public class CurrentConditionsDisplay : IObserver, IDisplayElement
     {
-        private Observable Observable { get; set; }
+        private IObservable Observable { get; set; }
         private double Temperature { get; set; }
         private double Humidity { get; set; }
 
-        public CurrentConditionsDisplay(Observable observable)
+        public CurrentConditionsDisplay(IObservable observable)
         {
             this.Observable = observable;
             observable.registerObserver(this);
