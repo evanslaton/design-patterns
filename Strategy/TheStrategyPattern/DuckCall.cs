@@ -6,7 +6,7 @@ namespace Strategy
 {
     public class DuckCall
     {
-        public QuackBehavior QuackBehavior { get; set; }
+        public IQuackBehavior QuackBehavior { get; set; }
 
         public DuckCall()
         {

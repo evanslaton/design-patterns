@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Strategy
 {
-    public interface FlyBehavior
+    public interface IQuackBehavior
     {
-        public void Fly();
+        public void Quack();
     }
 }

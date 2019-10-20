@@ -9,3 +9,4 @@ Strategy lets the algorithm vary independently from clients that use it.
 
 ## Additional Resources
 * [Keep it Simple with the Strategy Design Pattern](https://blog.bitsrc.io/keep-it-simple-with-the-strategy-design-pattern-c36a14c985e9)
+* [Strategy Pattern – Design Patterns (ep 1)](https://www.youtube.com/watch?v=v9ejT8FO-7I)

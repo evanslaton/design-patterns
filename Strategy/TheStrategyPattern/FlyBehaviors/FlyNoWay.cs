@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Strategy
 {
-    public class FlyNoWay : FlyBehavior
+    public class FlyNoWay : IFlyBehavior
     {
         public void Fly()
         {
