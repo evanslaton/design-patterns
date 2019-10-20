@@ -8,4 +8,4 @@ Strategy lets the algorithm vary independently from clients that use it.
 * Favor composition over inheritance.
 
 ## Additional Resources
-[Keep it Simple with the Strategy Design Pattern](https://blog.bitsrc.io/keep-it-simple-with-the-strategy-design-pattern-c36a14c985e9)
+* [Keep it Simple with the Strategy Design Pattern](https://blog.bitsrc.io/keep-it-simple-with-the-strategy-design-pattern-c36a14c985e9)
