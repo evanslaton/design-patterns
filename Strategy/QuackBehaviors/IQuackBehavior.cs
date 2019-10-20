@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Strategy
 {
-    public interface QuackBehavior
+    public interface IQuackBehavior
     {
         public void Quack();
     }

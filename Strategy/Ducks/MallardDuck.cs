@@ -6,7 +6,7 @@ namespace Strategy
 {
     public class MallardDuck : Duck
     {
-        public MallardDuck(FlyBehavior flyBehavior, QuackBehavior quackBehavior) : base(flyBehavior, quackBehavior) {}
+        public MallardDuck(IFlyBehavior flyBehavior, IQuackBehavior quackBehavior) : base(flyBehavior, quackBehavior) {}
 
         public override void Display()
         {

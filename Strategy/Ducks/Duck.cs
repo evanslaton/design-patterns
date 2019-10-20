@@ -6,10 +6,10 @@ namespace Strategy
 {
     public abstract class Duck
     {
-        public FlyBehavior Fly {get; set;}
-        public QuackBehavior Quack { get; set; }
+        public IFlyBehavior Fly {get; set;}
+        public IQuackBehavior Quack { get; set; }
 
-        public Duck(FlyBehavior flyBehavior, QuackBehavior quackBehavior)
+        public Duck(IFlyBehavior flyBehavior, IQuackBehavior quackBehavior)
         {
             this.Fly = flyBehavior;
             this.Quack = quackBehavior;
