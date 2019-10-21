@@ -3,3 +3,4 @@
 
 ## Patterns
 * [The Strategy Pattern](Strategy/)
+* [The Observer Pattern](Observer/)

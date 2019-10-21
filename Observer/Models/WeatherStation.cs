@@ -2,31 +2,31 @@
 
 namespace ObserverPattern
 {
-    public class WeatherStation : Observable
+    public class WeatherStation : IObservable
     {
-        private HashSet<Observer> Observers { get; }
+        private HashSet<IObserver> Observers { get; }
         private double Temperature { get; set; }
         private double Humidity { get; set; }
         private double Pressure { get; set; }
 
         public WeatherStation()
         {
-            this.Observers = new HashSet<Observer>();
+            this.Observers = new HashSet<IObserver>();
         }
 
-        public void registerObserver(Observer observer)
+        public void registerObserver(IObserver observer)
         {
             this.Observers.Add(observer);
         }
 
-        public void removeObserver(Observer observer)
+        public void removeObserver(IObserver observer)
         {
             this.Observers.Remove(observer);
         }
 
         public void notifyObserver()
         {
-            foreach (Observer observer in this.Observers)
+            foreach (IObserver observer in this.Observers)
             {
                 observer.Update(this.Temperature, this.Humidity, this.Pressure);
             }
