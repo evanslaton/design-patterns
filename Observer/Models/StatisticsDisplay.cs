@@ -22,9 +22,8 @@ namespace ObserverPattern
 
         public void Update()
         {
-            if (this.Observable is WeatherStation)
+            if (this.Observable is WeatherStation weatherStation)
             {
-                WeatherStation weatherStation = (WeatherStation)this.Observable;
                 this.TemperaturesSum += weatherStation.Temperature;
                 this.NumberOfTemperatures++;
                 if (weatherStation.Temperature > this.MaximumTemperature) 
