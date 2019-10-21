@@ -28,9 +28,8 @@ namespace ObserverPattern.Models
         {
             double heatIndex = 0.0;
 
-            if (this.Observable is WeatherStation)
+            if (this.Observable is WeatherStation weatherStation)
             {
-                WeatherStation weatherStation = (WeatherStation)this.Observable;
                 double temperature = weatherStation.Temperature;
                 double humidity = weatherStation.Humidity;
                 heatIndex = ((16.923 + (0.185212 * temperature) + (5.37941 * humidity) - 

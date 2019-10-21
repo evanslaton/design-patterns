@@ -16,9 +16,8 @@ namespace ObserverPattern
 
         public void Update()
         {
-            if (this.Observable is WeatherStation)
+            if (this.Observable is WeatherStation weatherStation)
             {
-                WeatherStation weatherStation = (WeatherStation)this.Observable;
                 this.Temperature = weatherStation.Temperature;
                 this.Humidity = weatherStation.Humidity;
             }
