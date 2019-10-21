@@ -14,10 +14,14 @@ namespace ObserverPattern
             observable.registerObserver(this);
         }
 
-        public void Update(double temperature, double humidity, double pressure)
+        public void Update()
         {
-            this.Temperature = temperature;
-            this.Humidity = humidity;
+            if (this.Observable is WeatherStation)
+            {
+                WeatherStation weatherStation = (WeatherStation)this.Observable;
+                this.Temperature = weatherStation.Temperature;
+                this.Humidity = weatherStation.Humidity;
+            }
             this.Display();
         }
 

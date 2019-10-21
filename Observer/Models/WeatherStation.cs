@@ -5,9 +5,9 @@ namespace ObserverPattern
     public class WeatherStation : IObservable
     {
         private HashSet<IObserver> Observers { get; }
-        private double Temperature { get; set; }
-        private double Humidity { get; set; }
-        private double Pressure { get; set; }
+        public double Temperature { get; private set; }
+        public double Humidity { get; private set; }
+        public double Pressure { get; private set; }
 
         public WeatherStation()
         {
@@ -24,12 +24,12 @@ namespace ObserverPattern
             this.Observers.Remove(observer);
         }
 
-        public void notifyObserver()
+        public void setMeasurements(double temperature, double humidity, double pressure)
         {
-            foreach (IObserver observer in this.Observers)
-            {
-                observer.Update(this.Temperature, this.Humidity, this.Pressure);
-            }
+            this.Temperature = temperature;
+            this.Humidity = humidity;
+            this.Pressure = pressure;
+            this.MeasurementsChange();
         }
 
         public void MeasurementsChange()
@@ -37,12 +37,12 @@ namespace ObserverPattern
             this.notifyObserver();
         }
 
-        public void setMeasurements(double temperature, double humidity, double pressure)
+        public void notifyObserver()
         {
-            this.Temperature = temperature;
-            this.Humidity = humidity;
-            this.Pressure = pressure;
-            this.MeasurementsChange();
+            foreach (IObserver observer in this.Observers)
+            {
+                observer.Update();
+            }
         }
     }
 }

@@ -20,12 +20,18 @@ namespace ObserverPattern
             this.MinimumTemperature = Int32.MaxValue;
         }
 
-        public void Update(double temperature, double humity, double pressure)
+        public void Update()
         {
-            this.TemperaturesSum += temperature;
-            this.NumberOfTemperatures++;
-            if (temperature > this.MaximumTemperature) this.MaximumTemperature = temperature;
-            if (temperature < this.MinimumTemperature) this.MinimumTemperature = temperature;
+            if (this.Observable is WeatherStation)
+            {
+                WeatherStation weatherStation = (WeatherStation)this.Observable;
+                this.TemperaturesSum += weatherStation.Temperature;
+                this.NumberOfTemperatures++;
+                if (weatherStation.Temperature > this.MaximumTemperature) 
+                    this.MaximumTemperature = weatherStation.Temperature;
+                if (weatherStation.Temperature < this.MinimumTemperature) 
+                    this.MinimumTemperature = weatherStation.Temperature;
+            }
             this.Display();
         }
 
