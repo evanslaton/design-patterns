@@ -4,7 +4,12 @@ using System.Text;
 
 namespace DecoratorPattern
 {
-    class Beverage
+    public abstract class Beverage
     {
+        protected string Description { get; set; }
+
+        public string GetDescription() => Description;
+
+        public abstract double Cost();
     }
 }
