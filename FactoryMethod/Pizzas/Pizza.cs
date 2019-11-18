@@ -5,7 +5,6 @@ using FactoryMethodPattern.Ingredients.Cheese;
 using FactoryMethodPattern.Ingredients.Pepperoni;
 using FactoryMethodPattern.Ingredients.Clams;
 using System;
-using System.Collections.Generic;
 
 namespace FactoryMethodPattern
 {
