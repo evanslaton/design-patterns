@@ -8,5 +8,5 @@ Provides an interface for creating families of related or dependent objects with
 * Dependency Inversion Principle: Depend upon abstractions. Do not depend upon concrete classes.
 
 ## Additional Resources
-* [Abstract Method – Design Patterns (ep 4)](https://www.youtube.com/watch?v=EcFVTgRHJLM&t=34s)
-* [Abstract Factory – Design Patterns (ep 5)](https://www.youtube.com/watch?v=v-GiuMmsXj4&t=1182s)
+* [Abstract Method â€“ Design Patterns (ep 4)](https://www.youtube.com/watch?v=EcFVTgRHJLM&t=34s)
+* [Abstract Factory â€“ Design Patterns (ep 5)](https://www.youtube.com/watch?v=v-GiuMmsXj4&t=1182s)

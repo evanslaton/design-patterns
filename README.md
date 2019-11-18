@@ -4,3 +4,5 @@
 ## Patterns
 * [The Strategy Pattern](Strategy/)
 * [The Observer Pattern](Observer/)
+* [The Decorator Pattern](Decorator/)
+* [The Factory Patterns](FactoryMethod/)
