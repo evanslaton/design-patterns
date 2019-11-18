@@ -5,7 +5,6 @@ using FactoryMethodPattern.Ingredients.Cheese;
 using FactoryMethodPattern.Ingredients.Pepperoni;
 using FactoryMethodPattern.Ingredients.Clams;
 using System;
-using System.Collections.Generic;
 
 namespace FactoryMethodPattern
 {
@@ -24,7 +23,7 @@ namespace FactoryMethodPattern
         public void Cut() => Console.WriteLine("Cutting the pizza.");
         public void Box() => Console.WriteLine("Putting pizza in a box.");
         public override string ToString() {
-            return $"{Dough}, {Sauce}, {Cheese}";
+            return $"{Dough.Description()}, {Sauce.Description()}, {Cheese.Description()}";
         }
     }
 }

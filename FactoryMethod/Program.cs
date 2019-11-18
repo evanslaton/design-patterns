@@ -17,8 +17,9 @@ namespace FactoryMethod
             //pizza = chicagoStore.OrderPizza("pepperoni");
 
 
-            Pizza cheesePizza = new CheesePizza(new NYPizzaIngredientFactory());
-            cheesePizza.Prepare();
+            PizzaStore store = new NYPizzaStore();
+            Pizza pizza = store.CreatePizza("cheese");
+            pizza.Prepare();
         }
     }
 }

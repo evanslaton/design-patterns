@@ -1,7 +1,5 @@
 ﻿using FactoryMethodPattern.PizzaStores;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace FactoryMethodPattern.Pizzas
 {
@@ -19,7 +17,7 @@ namespace FactoryMethodPattern.Pizzas
             Dough = IngredientFactory.CreateDough();
             Sauce = IngredientFactory.CreateSauce();
             Cheese = IngredientFactory.CreateCheese();
-            Console.WriteLine($"Creating: {ToString()}");
+            Console.WriteLine($"Creating {Name}: {ToString()}");
         }
     }
 }
