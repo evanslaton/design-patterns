@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿//namespace Command
+//{
+//    public class SimpleRemoteControl
+//    {
+//        public Command Slot { get; set; }
 
-namespace Command
-{
-    public class SimpleRemoteControl
-    {
-        public Command Slot { get; set; }
+//        public SimpleRemoteControl() { }
 
-        public SimpleRemoteControl() { }
-
-        public void ButtonWasPressed()
-        {
-            Slot.Execute();
-        }
-    }
-}
+//        public void ButtonWasPressed()
+//        {
+//            Slot.Execute();
+//        }
+//    }
+//}

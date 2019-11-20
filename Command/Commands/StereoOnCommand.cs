@@ -15,5 +15,7 @@
             Stereo.SetCD();
             Stereo.SetVolumn(10);
         }
+
+        public void Undo() => Stereo.Off();
     }
 }

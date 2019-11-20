@@ -10,5 +10,12 @@
         }
 
         public void Execute() => Stereo.Off();
+
+        public void Undo()
+        {
+            Stereo.On();
+            Stereo.SetCD();
+            Stereo.SetVolumn(10);
+        }
     }
 }

@@ -10,5 +10,6 @@
         }
 
         public void Execute() => Light.On();
+        public void Undo() => Light.Off();
     }
 }
