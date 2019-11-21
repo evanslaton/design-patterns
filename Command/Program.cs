@@ -32,15 +32,28 @@ namespace Command
 
             Console.WriteLine(remote.ToString());
 
-            remote.OnButtonWasPushed(0);
-            remote.OnButtonWasPushed(1);
-            remote.OffButtonWasPushed(0);
-            remote.OffButtonWasPushed(1);
-            remote.UndoButtonWasPushed();
-            remote.OnButtonWasPushed(2);
-            remote.OnButtonWasPushed(3);
-            remote.UndoButtonWasPushed();
-            remote.OffButtonWasPushed(2);
+            //remote.OnButtonWasPushed(0);
+            //remote.OnButtonWasPushed(1);
+            //remote.OffButtonWasPushed(0);
+            //remote.OffButtonWasPushed(1);
+            //remote.UndoButtonWasPushed();
+
+            //remote.OnButtonWasPushed(2);
+            //remote.OnButtonWasPushed(3);
+            //remote.UndoButtonWasPushed();
+            //remote.OffButtonWasPushed(2);
+            //remote.UndoButtonWasPushed();
+
+            Command[] onCommands = { livingRoomLightOn, stereoOn, ceilingFanHigh };
+            MacroCommand macroCommandOn = new MacroCommand(onCommands);
+            Command[] offCommands = { livingRoomLightOff, stereoOff, ceilingFanOff };
+            MacroCommand macroCommandOff = new MacroCommand(offCommands);
+
+            remote.SetCommand(5, macroCommandOn, macroCommandOff);
+
+            remote.OnButtonWasPushed(5);
+            Console.WriteLine();
+            //remote.OffButtonWasPushed(5);
             remote.UndoButtonWasPushed();
 
         }
