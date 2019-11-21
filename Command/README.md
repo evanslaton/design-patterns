@@ -8,4 +8,4 @@ Allows you to create macros of commands so that you can execute multiple command
 Removes the responsbility for handling 'null' from the client when you don't have a meaningful object to return.
 
 ## Resources
-[Command Pattern – Design Patterns (ep 1)](https://www.youtube.com/watch?v=9qA5kw8dcSU)
+[Command Pattern – Design Patterns (ep 7)](https://www.youtube.com/watch?v=9qA5kw8dcSU)
