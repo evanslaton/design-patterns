@@ -15,7 +15,8 @@ namespace Facade
             Projector projector = new Projector(dvd);
             Amplifier amp = new Amplifier(tuner, dvd, cd);
 
-            HomeTheaterFacade facade = new HomeTheaterFacade(popper, lights, screen, dvd, cd, tuner, projector, amp);
+            HomeTheaterFacade facade = new HomeTheaterFacade(popper, lights, screen, dvd,
+                                                            cd, tuner, projector, amp);
             facade.WatchMovie();
             Console.WriteLine();
             facade.EndMovie();
