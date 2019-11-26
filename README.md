@@ -7,3 +7,4 @@
 * [The Decorator Pattern](Decorator/)
 * [The Factory Patterns](FactoryMethod/)
 * [The Command Pattern (with Macro Command and Null Object Patterns)](Command/)
+* [The Facade Pattern](Facade/)
