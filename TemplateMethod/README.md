@@ -9,3 +9,6 @@ A method that is declared in the abstract class, but only given an empty or defa
 
 ## Dependency Rot
 When high-level components depend on low-level components depending on high-level components.
+
+## Resources
+[Template Method Pattern – Design Patterns (ep 13)](https://www.youtube.com/watch?v=7ocpwK9uesw&list=PLrhzvIcii6GNjpARdnO4ueTUAVR9eMBpc&index=13)
