@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Iterator
 {
@@ -22,5 +20,7 @@ namespace Iterator
             MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
             MenuItems.Add(menuItem);
         }
+
+        public IIterator CreateIterator() => new PancakeHouseMenuIterator(MenuItems);
     }
 }

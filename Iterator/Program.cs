@@ -6,7 +6,11 @@ namespace Iterator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
+            DinerMenu dinerMenu = new DinerMenu();
+            Waiter waiter = new Waiter(pancakeHouseMenu, dinerMenu);
+
+            waiter.PrintMenu();
         }
     }
 }
