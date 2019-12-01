@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Iterator
 {
@@ -8,7 +6,7 @@ namespace Iterator
     {
         public static int MAX_ITEMS = 6;
         public int NumberOfItems { get; set; }
-        MenuItem[] MenuItems { get; }
+        private MenuItem[] MenuItems { get; }
 
         public DinerMenu()
         {
@@ -32,5 +30,7 @@ namespace Iterator
                 NumberOfItems++;
             }
         }
+
+        public IIterator CreateIterator() => new DinerMenuIterator(MenuItems);
     }
 }
