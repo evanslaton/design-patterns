@@ -11,3 +11,4 @@
 * [The Adapter Pattern](Adapter/)
 * [The Facade Pattern](Facade/)
 * [The Template Method Pattern](TemplateMethod/)
+* [The Iterator Pattern](Iterator/)
