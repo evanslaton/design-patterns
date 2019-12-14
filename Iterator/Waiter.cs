@@ -1,26 +1,24 @@
-﻿using System;
+﻿using Iterator.Menus;
+using System;
 
 namespace Iterator
 {
     public class Waiter
     {
-        PancakeHouseMenu PancakeHouseMenu { get; }
-        DinerMenu DinerMenu { get; }
+        IMenu[] Menus;
 
-        public Waiter(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu)
+        public Waiter(IMenu[] menus)
         {
-            PancakeHouseMenu = pancakeHouseMenu;
-            DinerMenu = dinerMenu;
+            Menus = menus;
         }
 
         public void PrintMenu()
         {
-            IIterator pancakeIterator = PancakeHouseMenu.CreateIterator();
-            IIterator dinerIterator = DinerMenu.CreateIterator();
-
-            PrintMenu(pancakeIterator);
-            Console.WriteLine();
-            PrintMenu(dinerIterator);
+            foreach (IMenu menu in Menus)
+            {
+                PrintMenu(menu.CreateIterator());
+                Console.WriteLine();
+            }
         }
 
         private void PrintMenu(IIterator iterator)
