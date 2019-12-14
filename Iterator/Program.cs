@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Iterator.Menus;
 
 namespace Iterator
 {
@@ -6,9 +6,8 @@ namespace Iterator
     {
         static void Main(string[] args)
         {
-            PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
-            DinerMenu dinerMenu = new DinerMenu();
-            Waiter waiter = new Waiter(pancakeHouseMenu, dinerMenu);
+            IMenu[] menus = { new PancakeHouseMenu(), new DinerMenu(), new CafeMenu() };
+            Waiter waiter = new Waiter(menus);
 
             waiter.PrintMenu();
         }

@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Iterator.Menus;
+using System;
 
 namespace Iterator
 {
-    public class DinerMenu
+    public class DinerMenu : IMenu
     {
         public static int MAX_ITEMS = 6;
         public int NumberOfItems { get; set; }

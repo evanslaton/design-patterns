@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Iterator.Menus;
+using System.Collections.Generic;
 
 namespace Iterator
 {
-    public class PancakeHouseMenu
+    public class PancakeHouseMenu : IMenu
     {
         public List<MenuItem> MenuItems { get; }
 
