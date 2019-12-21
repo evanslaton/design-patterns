@@ -1,33 +1,18 @@
-﻿using Iterator.Menus;
+﻿using Composite;
+using Iterator.Menus;
 using System;
 
 namespace Iterator
 {
     public class Waiter
     {
-        IMenu[] Menus;
+        MenuComponent AllMenus { get; }
 
-        public Waiter(IMenu[] menus)
+        public Waiter(MenuComponent allMenus)
         {
-            Menus = menus;
+            AllMenus = allMenus;
         }
 
-        public void PrintMenu()
-        {
-            foreach (IMenu menu in Menus)
-            {
-                PrintMenu(menu.CreateIterator());
-                Console.WriteLine();
-            }
-        }
-
-        private void PrintMenu(IIterator iterator)
-        {
-            while (iterator.HasNext())
-            {
-                MenuItem menuItem = (MenuItem)iterator.Next();
-                Console.WriteLine($"{menuItem.Price} - {menuItem.Name}: {menuItem.Description}");
-            }
-        }
+        public void PrintMenu() => AllMenus.Print();
     }
 }
