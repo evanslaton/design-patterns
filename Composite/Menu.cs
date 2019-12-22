@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Composite
 {
@@ -24,7 +23,7 @@ namespace Composite
 
         public override void Print()
         {
-            Console.WriteLine($"{Name}, {Description}");
+            Console.WriteLine($"\n{Name}, {Description}");
             List<MenuComponent>.Enumerator menuComponents = MenuComponents.GetEnumerator();
             while (menuComponents.MoveNext())
             {

@@ -19,7 +19,7 @@ namespace Iterator
         {
             Console.Write(Name);
             if (Vegetarian) Console.Write(" (v),");
-            Console.Write($" {Price} -- {Description}");
+            Console.WriteLine($" {Price} -- {Description}");
         }
     }
 }
