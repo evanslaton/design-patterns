@@ -23,6 +23,6 @@ namespace Iterator
             Console.WriteLine($" {Price} -- {Description}");
         }
 
-        public override IEnumerator CreateIterator() => new NullIterator();
+        public override IEnumerator CreateEnumerator() => new NullEnumerator();
     }
 }

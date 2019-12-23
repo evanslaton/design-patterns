@@ -17,11 +17,11 @@ namespace Iterator
 
         public void PrintVegetarianMenu()
         {
-            IEnumerator iterator = AllMenus.CreateIterator();
+            IEnumerator enumerator = AllMenus.CreateEnumerator();
             Console.WriteLine("\nVEGETARIAN MENU\n----");
-            while (iterator.MoveNext())
+            while (enumerator.MoveNext())
             {
-                MenuComponent menuComponent = (MenuComponent)iterator.Current;
+                MenuComponent menuComponent = (MenuComponent)enumerator.Current;
                 try
                 {
                     if (((MenuItem)menuComponent).Vegetarian)
