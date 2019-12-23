@@ -29,6 +29,6 @@ namespace Composite
 
         public virtual void Print() => throw new NotSupportedException();
 
-        public virtual IEnumerator CreateIterator() => throw new NotSupportedException();
+        public virtual IEnumerator CreateEnumerator () => throw new NotSupportedException();
     }
 }

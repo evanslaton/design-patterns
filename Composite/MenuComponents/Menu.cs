@@ -36,10 +36,10 @@ namespace Composite
             }
         }
 
-        public override IEnumerator CreateIterator()
+        public override IEnumerator CreateEnumerator()
         {
             if (Enumerator == null)
-                Enumerator = new CompositeIterator(MenuComponents.GetEnumerator());
+                Enumerator = new CompositeEnumerator(MenuComponents.GetEnumerator());
             return Enumerator;
         }
     }
