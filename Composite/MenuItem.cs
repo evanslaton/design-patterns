@@ -1,5 +1,6 @@
 ﻿using Composite;
 using System;
+using System.Collections;
 
 namespace Iterator
 {
@@ -21,5 +22,7 @@ namespace Iterator
             if (Vegetarian) Console.Write(" (v),");
             Console.WriteLine($" {Price} -- {Description}");
         }
+
+        public override IEnumerator CreateIterator() => new NullIterator();
     }
 }

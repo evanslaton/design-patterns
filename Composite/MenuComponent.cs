@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Composite
 {
@@ -26,5 +28,7 @@ namespace Composite
         public virtual bool IsVegetarian() => throw new NotSupportedException();
 
         public virtual void Print() => throw new NotSupportedException();
+
+        public virtual IEnumerator CreateIterator() => throw new NotSupportedException();
     }
 }

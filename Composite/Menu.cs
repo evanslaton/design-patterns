@@ -1,15 +1,18 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Composite
 {
     public class Menu : MenuComponent
     {
+        IEnumerator Enumerator { get; set; }
         public List<MenuComponent> MenuComponents { get; }
 
         public Menu(string name, string description) :
             base(name, description)
         {
+            Enumerator = null;
             MenuComponents = new List<MenuComponent>();
         }
 
@@ -24,12 +27,20 @@ namespace Composite
         public override void Print()
         {
             Console.WriteLine($"\n{Name}, {Description}");
-            List<MenuComponent>.Enumerator menuComponents = MenuComponents.GetEnumerator();
+            Console.WriteLine("-----------------");
+            IEnumerator<MenuComponent> menuComponents = MenuComponents.GetEnumerator();
             while (menuComponents.MoveNext())
             {
                 MenuComponent menuComponent = menuComponents.Current;
                 menuComponent.Print();
             }
+        }
+
+        public override IEnumerator CreateIterator()
+        {
+            if (Enumerator == null)
+                Enumerator = new CompositeIterator(MenuComponents.GetEnumerator());
+            return Enumerator;
         }
     }
 }

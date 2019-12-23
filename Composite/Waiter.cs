@@ -1,6 +1,6 @@
 ﻿using Composite;
-using Iterator.Menus;
 using System;
+using System.Collections;
 
 namespace Iterator
 {
@@ -14,5 +14,23 @@ namespace Iterator
         }
 
         public void PrintMenu() => AllMenus.Print();
+
+        public void PrintVegetarianMenu()
+        {
+            IEnumerator iterator = AllMenus.CreateIterator();
+            Console.WriteLine("\nVEGETARIAN MENU\n----");
+            while (iterator.MoveNext())
+            {
+                MenuComponent menuComponent = (MenuComponent)iterator.Current;
+                try
+                {
+                    if (((MenuItem)menuComponent).Vegetarian)
+                    {
+                        menuComponent.Print();
+                    }
+                }
+                catch (NotImplementedException exception) { }
+            }
+        }
     }
 }
