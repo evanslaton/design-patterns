@@ -9,8 +9,7 @@ namespace Composite
     {
         Stack<IEnumerator> Stack = new Stack<IEnumerator>();
 
-        // Unused
-        public object Current => throw new NotImplementedException();
+        public object Current => Stack.Peek().Current;
 
         public CompositeEnumerator(IEnumerator enumerator)
         {
