@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Composite
 {
@@ -15,38 +14,28 @@ namespace Composite
         {
             Stack.Push(enumerator); 
         }
-
-        // check if the stack is empty
-          // if not, get the top IEnumerator out of the stack
-          // get the next component out of the IEnumerator (IEnumerator keeps track of its current)
-            // if that item is also an IEnumerator, put it on top of the stack
-          // return the component
-        // else return null
-
-
-
        
-        public Object Next()
-        { 
-            if (MoveNext())
+        public bool MoveNext()
+        {
+            if (HasNext())
             {
-                IEnumerator enumerator = (IEnumerator)Stack.Peek();
+                IEnumerator enumerator = Stack.Peek();
                 enumerator.MoveNext();
                 MenuComponent component = (MenuComponent)enumerator.Current;
-                    if (enumerator.Current is Menu)
-                    {
-                        Menu menu = (Menu)enumerator.Current;
-                        Stack.Push(menu.MenuComponents.GetEnumerator());
-                    }
-                    return component;
+                if (enumerator.Current is Menu)
+                {
+                    Menu menu = (Menu)enumerator.Current;
+                    Stack.Push(menu.MenuComponents.GetEnumerator());
+                }
+                return true;
             }
             else
             {
-              return null;
+              return false;
             }
         }
         
-        public bool MoveNext()
+        public bool HasNext()
         {
             if (Stack.Count == 0)
             {
@@ -54,11 +43,11 @@ namespace Composite
             }
             else
             {
-                IEnumerator enumerator = (IEnumerator)Stack.Peek();
-                if (!enumerator.MoveNext())
+                IEnumerator enumerator = Stack.Peek();
+                if (HasNext())
                 {
                     Stack.Pop(); 
-                    return MoveNext();
+                    return HasNext();
                 }
                 else
                 {
