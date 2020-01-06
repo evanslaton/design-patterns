@@ -12,3 +12,5 @@
 * [The Facade Pattern](Facade/)
 * [The Template Method Pattern](TemplateMethod/)
 * [The Iterator Pattern](Iterator/)
+* [The Composite Pattern](Composite/)
+* [The State Pattern](State/)
