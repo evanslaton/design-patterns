@@ -14,3 +14,4 @@
 * [The Iterator Pattern](Iterator/)
 * [The Composite Pattern](Composite/)
 * [The State Pattern](State/)
+* [The Proxy Pattern](Proxy/)
