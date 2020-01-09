@@ -1,11 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using CompoundPattern.observes;
+using System;
 
 namespace CompoundPattern.quackables
 {
     public class RedheadDuck : IQuackable
     {
-        public void Quack() => Console.WriteLine("Quack");
+        public IQuackObservable Observable { get; set; }
+
+        public RedheadDuck()
+        {
+            Observable = new Observable(this);
+        }
+
+        public void Quack()
+        {
+            Console.WriteLine("Quack");
+            NotifyObservers();
+        }
+
+        public void RegisterObserver(IQuackObserver observer) => Observable.RegisterObserver(observer);
+
+        public void NotifyObservers() => Observable.NotifyObservers();
     }
 }
