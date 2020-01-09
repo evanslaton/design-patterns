@@ -2,7 +2,7 @@
 
 namespace CompoundPattern.quackables
 {
-    public class DuckCall : IQuackable
+    public class DuckCall
     {
         public void Quack() => Console.WriteLine("Kwak");
     }
