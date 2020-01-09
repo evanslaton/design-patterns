@@ -1,5 +1,6 @@
 ﻿using CompoundPattern.duckfactories;
 using CompoundPattern.goosefactories;
+using CompoundPattern.observers;
 using CompoundPattern.quackables;
 using System;
 
@@ -43,11 +44,10 @@ namespace CompoundPattern
 
             flockOfDucks.Add(flockOfMallards);
 
-            Console.WriteLine("\nDuck Simulator: Whole Flock Simulation");
+            Console.WriteLine("\nDuck Simulator: With Observer");
+            Quackologist quackologist = new Quackologist();
+            flockOfDucks.RegisterObserver(quackologist);
             Simulate(flockOfDucks);
-
-            Console.WriteLine("\nDuck Simulator: Mallard Flock Simulation");
-            Simulate(flockOfMallards);
 
             Console.WriteLine($"\nThe ducks quacked {QuackCounterDecorator.NumberOfQuacks} times");
         }

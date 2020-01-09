@@ -1,4 +1,6 @@
-﻿namespace CompoundPattern.quackables
+﻿using CompoundPattern.observes;
+
+namespace CompoundPattern.quackables
 {
     public class QuackCounterDecorator : IQuackable
     {
@@ -15,5 +17,9 @@
             Duck.Quack();
             NumberOfQuacks++;
         }
+
+        public void RegisterObserver(IQuackObserver quackObserver) => Duck.RegisterObserver(quackObserver);
+
+        public void NotifyObservers() => Duck.NotifyObservers();
     }
 }

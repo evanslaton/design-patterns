@@ -2,7 +2,7 @@
 {
     public interface IQuackObservable
     {
-        public void RegisterObserver(IQuackObserver);
+        public void RegisterObserver(IQuackObserver quackObserver);
         public void NotifyObservers();
     }
 }
