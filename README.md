@@ -15,3 +15,4 @@
 * [The Composite Pattern](Composite/)
 * [The State Pattern](State/)
 * [The Proxy Pattern](Proxy/)
+* [A Compound Pattern](CompoundPattern/)
